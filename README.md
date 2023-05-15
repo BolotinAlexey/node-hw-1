@@ -14,4 +14,4 @@
 
 > ### node index --action remove --id r874Zn4IGBDKgQSqeQkpa
 >
-> #### https://ibb.co/Z6Cqhx6
+> #### https://ibb.co/qL61jpF
