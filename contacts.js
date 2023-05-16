@@ -27,6 +27,7 @@ async function getContactById(contactId) {
 
 async function removeContact(contactId) {
   let data;
+
   try {
     data = await listContacts();
   } catch (error) {
@@ -44,12 +45,14 @@ async function removeContact(contactId) {
 
 async function addContact(name, email, phone) {
   let data;
+
   try {
     data = await listContacts();
   } catch (error) {
     throw new Error(error);
   }
   const newData = [...data, { name, email, phone, id: nanoid() }];
+
   try {
     writeJsonFile(newData);
     return newData;
@@ -57,6 +60,7 @@ async function addContact(name, email, phone) {
     throw new Error("File writing error " + error.mesage);
   }
 }
+
 module.exports = {
   listContacts,
   getContactById,
